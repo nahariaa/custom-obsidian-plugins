@@ -1,0 +1,9 @@
+{
+  "id": "custom-inline-checkbox",
+  "name": "Custom Inline Checkbox",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "Clickable #check and #done tags everywhere (including tables) that persist to disk for Git.",
+  "author": "Custom",
+  "isDesktopOnly": false
+}

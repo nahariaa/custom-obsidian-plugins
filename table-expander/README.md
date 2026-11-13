@@ -1,48 +1,24 @@
-/* Expand / shrink button, top-right corner of every table */
-.cic-te-wrap {
-    position: relative;
-}
+# Table Expander (Obsidian plugin)
 
-.cic-te-btn {
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    z-index: 5;
-    width: 24px;
-    height: 24px;
-    min-width: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--background-primary);
-    border: 1px solid var(--background-modifier-border);
-    border-radius: 6px;
-    box-shadow: none;
-    color: var(--text-muted);
-    opacity: 0.45;
-    cursor: pointer;
-    transition: opacity 0.12s ease;
-}
-.cic-te-wrap:hover .cic-te-btn { opacity: 0.8; }
-.cic-te-btn:hover {
-    opacity: 1 !important;
-    color: var(--text-normal);
-    background: var(--background-modifier-hover);
-}
-.cic-te-btn svg { width: 14px; height: 14px; }
+Adds a small expand/shrink button to the top-right corner of every table (Reading View and Live Preview).
 
-/* Expanded: full pane width, text wraps so nothing needs sideways scrolling */
-.cic-te-expanded {
-    max-width: none !important;
-    box-sizing: border-box;
-    overflow-x: auto;
-}
-.cic-te-expanded table {
-    width: 100%;
-}
-.cic-te-expanded td,
-.cic-te-expanded th {
-    white-space: normal !important;
-    overflow-wrap: break-word;
-}
+- Default: tables look exactly like normal Obsidian tables, so it works with *Readable line length* turned on.
+- Click the button: the table stretches across the full visible width of the pane and its text wraps.
+- Click again: it returns to its original size.
+- A table stays expanded while you edit it or tick checkboxes in it. This is remembered by note path and header row until Obsidian restarts.
+
+## Install
+
+Copy `manifest.json`, `main.js` and `styles.css` into:
+
+```
+<your-vault>/.obsidian/plugins/table-expander/
+```
+
+Then enable **Table Expander** under Settings -> Community plugins. Requires Obsidian 1.5.0 or newer.
+
+## Notes
+
+- Two tables in one note with identical header rows expand together.
+- Expanded state is not saved across restarts.
+- If you added a `wrap-tables.css` snippet earlier, turn it off under Settings -> Appearance -> CSS snippets so it doesn't conflict.

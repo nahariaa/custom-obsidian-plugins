@@ -1,0 +1,9 @@
+{
+  "id": "table-expander",
+  "name": "Table Expander",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "Adds an expand/shrink button to every table so wide tables can use the full pane width, even with Readable line length on.",
+  "author": "Custom",
+  "isDesktopOnly": false
+}
